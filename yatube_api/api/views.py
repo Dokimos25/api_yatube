@@ -3,6 +3,7 @@ from rest_framework import status, viewsets
 from rest_framework.permissions import IsAuthenticated
 from rest_framework.response import Response
 
+from posts.models import Comment, Group, Post, User
 from .permissions import OwnerOrReadOnly
 from .serializers import (
     CommentSerializer,
@@ -10,7 +11,6 @@ from .serializers import (
     PostSerializer,
     UserSerializer,
 )
-from posts.models import Comment, Group, Post, User
 
 
 class GroupViewSet(viewsets.ModelViewSet):
